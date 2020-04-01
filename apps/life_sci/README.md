@@ -12,6 +12,47 @@ featurization, and evaluation, model architectures, training scripts and pre-tra
 
 **For a full list of work implemented in DGL-LifeSci, see [here](examples/README.md).**
 
+## Installation
+
+DGL-LifeSci requires python 3.5+, DGL 0.4.3+ and PyTorch 1.2.0+.
+
+Additionally, we require `RDKit 2018.09.3` for cheminformatics. We recommend installing it with
+
+```
+conda install -c conda-forge rdkit==2018.09.3
+```
+ 
+For other installation recipes, see the [official documentation](https://www.rdkit.org/docs/Install.html).
+
+We support installation of `DGL-LifeSci` with pip.
+
+### Using pip
+
+```
+pip install dgllife
+```
+
+### From source
+
+If you want to try experimental features, you can install from source as follows:
+
+```
+git clone https://github.com/dmlc/dgl.git
+cd apps/life_sci/python
+python setup.py install
+```
+
+### Verifying successful installation
+
+Once you have installed the package, you can verify the success of installation with 
+
+```python
+import dgllife
+
+print(dgllife.__version__)
+# 0.2.0
+```
+
 ## Example Usage
 
 To apply graph neural networks to molecules with DGL, we need to first construct `DGLGraph` -- 
@@ -78,7 +119,8 @@ print(label_pred[:, mask != 0]) # Mask non-existing labels
 # 2.0957,  0.5919,  0.7715, 1.7273,  0.2070]])
 ```
 
-Similarly, we can load a pre-trained model for generating molecules.
+Similarly, we can load a pre-trained model for generating molecules. If possible, we recommend running 
+the code block below with Jupyter notebook.
 
 ```python
 from dgllife.model import load_pretrained
@@ -108,30 +150,6 @@ SVG(Draw.MolsToGridImage(mols, molsPerRow=4, subImgSize=(180, 150), useSVG=True)
 ```
 
 ![](https://data.dgl.ai/dgllife/dgmg/dgmg_model_zoo_example2.png)
-    
-## Installation
-
-DGL-LifeSci requires python 3.5+, DGL 0.4.3+ and PyTorch 1.2.0+.
-
-Additionally, we require `RDKit 2018.09.3` for cheminformatics. We recommend installing it with 
-`conda install -c conda-forge rdkit==2018.09.3`. For other installation recipes, 
-see the [official documentation](https://www.rdkit.org/docs/Install.html).
-
-We provide installation of `DGL-LifeSci` with pip. Once you have installed the package, 
-verify the success of installation with 
-
-```python
-import dgllife
-
-print(dgllife.__version__)
-# 0.2.0
-```
-
-### Using pip
-
-```
-pip install dgllife
-```
 
 ## Speed Reference
 
