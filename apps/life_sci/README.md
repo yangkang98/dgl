@@ -16,6 +16,12 @@ featurization, and evaluation, model architectures, training scripts and pre-tra
 
 ### Requirements
 
+DGL-LifeSci should work on
+
+* all Linux distributions no earlier than Ubuntu 16.04
+* macOS X
+* Windows 10
+
 DGL-LifeSci requires python 3.6+, DGL 0.4.3+ and PyTorch 1.2.0+.
 
 Additionally, we require `RDKit 2018.09.3` for cheminformatics. We recommend installing it with
@@ -30,6 +36,12 @@ For other installation recipes for RDKit, see the [official documentation](https
 
 ```
 pip install dgllife
+```
+
+### Conda installation for DGL-LifeSci
+
+```
+conda install -c dglteam dgllife
 ```
 
 ### Installation from source
@@ -50,8 +62,17 @@ Once you have installed the package, you can verify the success of installation 
 import dgllife
 
 print(dgllife.__version__)
-# 0.2.0
+# 0.2.1
 ```
+
+If you are new to DGL, the first time you import dgl a message will pop up as below:
+
+```
+DGL does not detect a valid backend option. Which backend would you like to work with?
+Backend choice (pytorch, mxnet or tensorflow):
+```
+
+and you need to enter `pytorch`.
 
 ## Example Usage
 
