@@ -31,12 +31,10 @@ setup(
         'life-science',
         'drug-discovery'
     ],
-    zip_safe=False,
     maintainer='DGL Team',
     packages=[package for package in find_packages()
               if package.startswith('dgllife')],
     install_requires=[
-        'torch>=1.1'
         'scikit-learn>=0.22.2',
         'pandas',
         'requests>=2.22.0',
