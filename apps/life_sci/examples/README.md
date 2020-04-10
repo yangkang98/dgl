@@ -1,6 +1,6 @@
 # Work Implemented in DGL-LifeSci
 
-We provide various examples across 3 applications -- property prediction, generative models and protein-ligand binding affinity prediction.
+We provide various examples across 4 applications -- property prediction, generative models and protein-ligand binding affinity prediction, protein function prediction.
 
 ## Datasets/Benchmarks
 
