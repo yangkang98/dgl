@@ -109,7 +109,7 @@ def main():
     parser.add_argument('--lr', type=float, default=0.01,
                         help='Learning rate (default: 0.01)')
     parser.add_argument('--epochs', type=int, default=1000,
-                        help='number of epochs to train (default: 100)')
+                        help='number of epochs to train (default: 1000)')
     parser.add_argument('--runs', type=int, default=10)
     args = parser.parse_args()
     args.dataset = 'ogbn-proteins'
