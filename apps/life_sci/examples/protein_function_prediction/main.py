@@ -131,7 +131,7 @@ def main():
     evaluator = Evaluator(args.dataset)
     logger = Logger(args.runs, args)
 
-    for run in range(args.run):
+    for run in range(args.runs):
         model = GIN(num_layer=args.num_layers, emb_dim=args.embed_dim).to(device)
         optimizer = Adam(model.parameters(), lr=args.lr)
 
